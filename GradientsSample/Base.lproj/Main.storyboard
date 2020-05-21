@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GradientsSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0L-3t-mef" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                <rect key="frame" x="33" y="143" width="348" height="185.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z0L-3t-mef" secondAttribute="height" multiplier="15:8" id="X87-d1-Jz7"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zpg-8D-Ujr">
+                                <rect key="frame" x="33" y="348" width="348" height="348"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Mk-Ol-BRF">
+                                        <rect key="frame" x="0.0" y="0.0" width="348" height="110.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMn-5X-ME0" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="110.5" height="110.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkH-YP-mAT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="110.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="zkH-YP-mAT" firstAttribute="leading" secondItem="iMn-5X-ME0" secondAttribute="leading" id="BxO-S6-fLe"/>
+                                                    <constraint firstItem="zkH-YP-mAT" firstAttribute="top" secondItem="iMn-5X-ME0" secondAttribute="top" id="LS1-qN-V54"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zkH-YP-mAT" secondAttribute="trailing" id="QYl-Cn-Cax"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zkH-YP-mAT" secondAttribute="bottom" id="yrA-P9-mVj"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SG-ie-2m6" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="118.5" y="0.0" width="111" height="110.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IH0-u9-Wlp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="110.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="IH0-u9-Wlp" secondAttribute="trailing" id="5ZY-FF-Uyz"/>
+                                                    <constraint firstAttribute="bottom" secondItem="IH0-u9-Wlp" secondAttribute="bottom" id="68B-tn-ATn"/>
+                                                    <constraint firstItem="IH0-u9-Wlp" firstAttribute="top" secondItem="2SG-ie-2m6" secondAttribute="top" id="FRF-Cz-hOd"/>
+                                                    <constraint firstItem="IH0-u9-Wlp" firstAttribute="leading" secondItem="2SG-ie-2m6" secondAttribute="leading" id="dtR-ay-leb"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBn-bB-6e0" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="237.5" y="0.0" width="110.5" height="110.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j7-rK-nKe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="110.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="5j7-rK-nKe" secondAttribute="trailing" id="LGp-WY-rA1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="5j7-rK-nKe" secondAttribute="bottom" id="UJU-Uj-76i"/>
+                                                    <constraint firstItem="5j7-rK-nKe" firstAttribute="top" secondItem="RBn-bB-6e0" secondAttribute="top" id="XYe-vH-h4u"/>
+                                                    <constraint firstItem="5j7-rK-nKe" firstAttribute="leading" secondItem="RBn-bB-6e0" secondAttribute="leading" id="mtd-wW-bZZ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N52-wg-wbA">
+                                        <rect key="frame" x="0.0" y="118.5" width="348" height="110.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MH7-ld-Tww" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="81" height="110.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ve0-wK-aqy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="110.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ve0-wK-aqy" secondAttribute="bottom" id="AQN-sM-BkO"/>
+                                                    <constraint firstItem="ve0-wK-aqy" firstAttribute="top" secondItem="MH7-ld-Tww" secondAttribute="top" id="V95-lM-3Wz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ve0-wK-aqy" secondAttribute="trailing" id="Xoe-22-b0L"/>
+                                                    <constraint firstItem="ve0-wK-aqy" firstAttribute="leading" secondItem="MH7-ld-Tww" secondAttribute="leading" id="o85-KH-Mlp"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sP-6l-yDp" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="89" y="0.0" width="81" height="110.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbu-VQ-fIW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="110.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="lbu-VQ-fIW" secondAttribute="trailing" id="0c0-EH-VMz"/>
+                                                    <constraint firstAttribute="bottom" secondItem="lbu-VQ-fIW" secondAttribute="bottom" id="NDF-hw-4pi"/>
+                                                    <constraint firstItem="lbu-VQ-fIW" firstAttribute="top" secondItem="1sP-6l-yDp" secondAttribute="top" id="T80-fP-4sc"/>
+                                                    <constraint firstItem="lbu-VQ-fIW" firstAttribute="leading" secondItem="1sP-6l-yDp" secondAttribute="leading" id="Zzn-I0-OLn"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIc-I9-EOQ" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="178" y="0.0" width="81" height="110.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-lb-W5U">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="110.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="hj5-lb-W5U" firstAttribute="top" secondItem="mIc-I9-EOQ" secondAttribute="top" id="3KZ-eD-6Q1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hj5-lb-W5U" secondAttribute="bottom" id="AnK-gh-cvG"/>
+                                                    <constraint firstItem="hj5-lb-W5U" firstAttribute="leading" secondItem="mIc-I9-EOQ" secondAttribute="leading" id="XD3-M2-snM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hj5-lb-W5U" secondAttribute="trailing" id="aTI-IR-lQ3"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-nj-KWj" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="267" y="0.0" width="81" height="110.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFI-xD-RyH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="110.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="AFI-xD-RyH" firstAttribute="leading" secondItem="JPa-nj-KWj" secondAttribute="leading" id="0y6-Ot-F9h"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AFI-xD-RyH" secondAttribute="trailing" id="Q8h-Cu-HrR"/>
+                                                    <constraint firstItem="AFI-xD-RyH" firstAttribute="top" secondItem="JPa-nj-KWj" secondAttribute="top" id="cPo-GK-fLB"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AFI-xD-RyH" secondAttribute="bottom" id="lbK-RS-ccj"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i6S-W1-IjZ">
+                                        <rect key="frame" x="0.0" y="237" width="348" height="111"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-6g-WNh" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="111"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyS-gp-fdj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="111"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="qyS-gp-fdj" secondAttribute="trailing" id="GWS-ce-yeO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qyS-gp-fdj" secondAttribute="bottom" id="X8s-WN-7eB"/>
+                                                    <constraint firstItem="qyS-gp-fdj" firstAttribute="leading" secondItem="3qb-6g-WNh" secondAttribute="leading" id="hym-TA-Mx9"/>
+                                                    <constraint firstItem="qyS-gp-fdj" firstAttribute="top" secondItem="3qb-6g-WNh" secondAttribute="top" id="nrA-PF-dvH"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOO-cD-fQb" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="71" y="0.0" width="63.5" height="111"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8I-nw-ioO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="111"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="b8I-nw-ioO" firstAttribute="leading" secondItem="HOO-cD-fQb" secondAttribute="leading" id="Fkw-ja-B7m"/>
+                                                    <constraint firstItem="b8I-nw-ioO" firstAttribute="top" secondItem="HOO-cD-fQb" secondAttribute="top" id="IwK-gc-V0D"/>
+                                                    <constraint firstAttribute="bottom" secondItem="b8I-nw-ioO" secondAttribute="bottom" id="evm-o1-ThH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="b8I-nw-ioO" secondAttribute="trailing" id="gNs-bH-m37"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtR-1t-BVM" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="142.5" y="0.0" width="63" height="111"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ml7-UW-VmG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="111"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="ml7-UW-VmG" firstAttribute="leading" secondItem="wtR-1t-BVM" secondAttribute="leading" id="Kdu-Xp-ySL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ml7-UW-VmG" secondAttribute="bottom" id="h61-z6-Kda"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ml7-UW-VmG" secondAttribute="trailing" id="pNf-Ls-81u"/>
+                                                    <constraint firstItem="ml7-UW-VmG" firstAttribute="top" secondItem="wtR-1t-BVM" secondAttribute="top" id="sye-SE-NVZ"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="og9-hc-5rL" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="213.5" y="0.0" width="63.5" height="111"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIF-nF-mbR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="111"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="ZIF-nF-mbR" secondAttribute="trailing" id="NTM-rC-AKL"/>
+                                                    <constraint firstItem="ZIF-nF-mbR" firstAttribute="leading" secondItem="og9-hc-5rL" secondAttribute="leading" id="Shr-eC-mkx"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ZIF-nF-mbR" secondAttribute="bottom" id="W8t-eI-5bR"/>
+                                                    <constraint firstItem="ZIF-nF-mbR" firstAttribute="top" secondItem="og9-hc-5rL" secondAttribute="top" id="gN7-5D-tz4"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukh-my-A9z" customClass="RoundedGradientView" customModule="GradientsSample" customModuleProvider="target">
+                                                <rect key="frame" x="285" y="0.0" width="63" height="111"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDr-i0-H7X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="111"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="iDr-i0-H7X" firstAttribute="leading" secondItem="Ukh-my-A9z" secondAttribute="leading" id="7Od-E9-KWT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iDr-i0-H7X" secondAttribute="trailing" id="BXd-pL-HLV"/>
+                                                    <constraint firstItem="iDr-i0-H7X" firstAttribute="top" secondItem="Ukh-my-A9z" secondAttribute="top" id="ave-P6-7OE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iDr-i0-H7X" secondAttribute="bottom" id="iLc-8S-aq1"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Z0L-3t-mef" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="J2R-FE-A2y"/>
+                            <constraint firstItem="Zpg-8D-Ujr" firstAttribute="leading" secondItem="Z0L-3t-mef" secondAttribute="leading" id="Qbk-eP-0cI"/>
+                            <constraint firstItem="Zpg-8D-Ujr" firstAttribute="trailing" secondItem="Z0L-3t-mef" secondAttribute="trailing" id="aTv-BO-6az"/>
+                            <constraint firstItem="4Mk-Ol-BRF" firstAttribute="height" secondItem="Z0L-3t-mef" secondAttribute="height" multiplier="0.595687" id="eRB-2X-f3y"/>
+                            <constraint firstItem="Zpg-8D-Ujr" firstAttribute="top" secondItem="Z0L-3t-mef" secondAttribute="bottom" constant="19.5" id="iYc-j8-jJe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z0L-3t-mef" secondAttribute="trailing" constant="33" id="kdL-nA-80o"/>
+                            <constraint firstItem="Z0L-3t-mef" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="wNC-Bk-3AP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="gradientView" destination="Z0L-3t-mef" id="sAH-9F-svf"/>
+                        <outlet property="stackView" destination="N52-wg-wbA" id="GuX-Ai-CuP"/>
+                        <outlet property="stackView3" destination="4Mk-Ol-BRF" id="NMf-8s-JaV"/>
+                        <outlet property="stackView5" destination="i6S-W1-IjZ" id="sVB-4M-u8H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
