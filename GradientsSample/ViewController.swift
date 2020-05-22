@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradientView.colors = divider4.gradientColor.map { $0.color.cgColor }
+        gradientView.colors = divider4.colors.map { $0.color.cgColor }
         gradientView.stops = [0, 0.5, 1]
     }
     
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
 }
 
 class GradientDivider {
-    let gradientColor: [GradientColor]
+    let colors: [GradientColor]
     let columnCount: Int
     
     init(columnCount: Int, colors: [GradientColor] = [
@@ -63,7 +63,7 @@ class GradientDivider {
                       progress: 0.1)
     ]) {
         self.columnCount = columnCount
-        self.gradientColor = colors
+        self.colors = colors
     }
     
     var stops: [CGFloat] {
@@ -109,15 +109,15 @@ class GradientDivider {
     }
     
     private func interval(for totalProgress: CGFloat) -> CGFloat {
-        return totalProgress > 0.5 ? (totalProgress - 0.5) / 0.5 : totalProgress / 0.5
+        totalProgress > 0.5 ? (totalProgress - 0.5) / 0.5 : totalProgress / 0.5
         
     }
     private func startColor(for totalProgress: CGFloat) -> UIColor {
-        return totalProgress > 0.5 ? gradientColor[1].color : gradientColor[0].color
+        return totalProgress > 0.5 ? colors[1].color : colors[0].color
         
     }
     private func endColor(for totalProgress: CGFloat) -> UIColor {
-        return totalProgress > 0.5 ? gradientColor[2].color : gradientColor[1].color
+        return totalProgress > 0.5 ? colors[2].color : colors[1].color
         
     }
 }
@@ -130,82 +130,4 @@ struct GradientColor {
 struct GradientRange {
     var from: Int
     var till: Int
-}
-
-final class RoundedGradientView: UIView {
-    @IBInspectable var radius: CGFloat = 16.0
-
-    var stops: [NSNumber] = [0.0, 1.0]
-    var colors: [CGColor] = [UIColor.clear.cgColor, UIColor.clear.cgColor] {
-        didSet {
-            addGradient()
-        }
-    }
-
-    // 0 - vertical, 1 - horizontal
-    var direction: Int = 1
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        addGradient()
-    }
-
-    private func addGradient() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: bounds.origin.x, y: 0, width: bounds.width, height: bounds.height)
-
-        gradientLayer.locations = stops
-
-        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-
-        gradientLayer.colors = colors
-        gradientLayer.cornerRadius = radius
-
-        layer.sublayers = []
-        layer.addSublayer(gradientLayer)
-    }
-}
-
-extension UIColor {
-    var rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
-        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-
-        return (red, green, blue, alpha)
-    }
-    convenience init(red: Int, green: Int, blue: Int) {
-        assert(red >= 0 && red <= 255, "Invalid red component")
-        assert(green >= 0 && green <= 255, "Invalid green component")
-        assert(blue >= 0 && blue <= 255, "Invalid blue component")
-
-        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-    }
-
-    convenience init(rgb: Int) {
-        self.init(
-            red: (rgb >> 16) & 0xFF,
-            green: (rgb >> 8) & 0xFF,
-            blue: rgb & 0xFF
-        )
-    }
-
-    public convenience init?(hexString: String?) {
-        guard let hexString = hexString?.uppercased() else { return nil }
-
-        let start = hexString.hasPrefix("#") ? hexString.index(hexString.startIndex, offsetBy: 1) : hexString.startIndex
-        let hexColor = String(hexString[start...])
-        let scanner = Scanner(string: hexColor)
-        var hexNumber: UInt64 = 0
-
-        if !scanner.scanHexInt64(&hexNumber) {
-            return nil
-        }
-
-        self.init(rgb: Int(hexNumber))
-    }
-    
 }
