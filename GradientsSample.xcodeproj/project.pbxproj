@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D90AA90247805FC00072FE6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D90AA8F247805FC00072FE6 /* UIColor+Extension.swift */; };
 		3DBBFA0E2473F85E002A3594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBFA0D2473F85E002A3594 /* AppDelegate.swift */; };
 		3DBBFA102473F85E002A3594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBFA0F2473F85E002A3594 /* SceneDelegate.swift */; };
 		3DBBFA122473F85E002A3594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBFA112473F85E002A3594 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D90AA8F247805FC00072FE6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3DBBFA0A2473F85E002A3594 /* GradientsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradientsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBBFA0D2473F85E002A3594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DBBFA0F2473F85E002A3594 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				3DBBFA182473F85F002A3594 /* LaunchScreen.storyboard */,
 				3DBBFA1B2473F85F002A3594 /* Info.plist */,
 				A54CB98F2477A76500851E58 /* RoundedGradientView.swift */,
+				3D90AA8F247805FC00072FE6 /* UIColor+Extension.swift */,
 			);
 			path = GradientsSample;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				3DBBFA0E2473F85E002A3594 /* AppDelegate.swift in Sources */,
 				A54CB9902477A76500851E58 /* RoundedGradientView.swift in Sources */,
 				3DBBFA102473F85E002A3594 /* SceneDelegate.swift in Sources */,
+				3D90AA90247805FC00072FE6 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
